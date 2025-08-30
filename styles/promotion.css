@@ -1,0 +1,89 @@
+/* Promotion Page Styles */
+.promotion-page {
+  padding: 120px 7% 80px;
+}
+
+.promotion-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.promotion-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.promotion-subtitle {
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.plans-comparison {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.comparison-table th {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: var(--light-bg);
+}
+
+.comparison-table i.fa-check {
+  color: #22c55e;
+  font-size: 1.2rem;
+}
+
+.comparison-table i.fa-times {
+  color: #ef4444;
+  font-size: 1.2rem;
+}
+
+.promotion-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .promotion-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .promotion-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Services - Blue Pool Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Professional pool services including maintenance, repairs, and upgrades">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Blue Pool</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html" aria-current="page">Services</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/promotion.html">Promotion</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero services-hero">
+      <h1>Professional Pool Services</h1>
+      <p>EXPERT POOL MAINTENANCE & REPAIR SOLUTIONS</p>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>Licensed Technicians</span>
+        </div>
+        <div class="hero-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>15+ Years Experience</span>
+        </div>
+        <div class="hero-feature">
+          <i class="fas fa-check-circle"></i>
+          <span>100% Satisfaction</span>
+        </div>
+      </div>
+      <a href="#service-request" class="cta-button">Schedule Service <i class="fas fa-arrow-right"></i></a>
+    </header>
+
+    <main>
+      <section class="main-services">
+        <div class="services-container">
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-swimming-pool"></i>
+            </div>
+            <h2>Pool Care & Cleaning</h2>
+            <p>Our comprehensive pool care and cleaning services ensure your pool stays pristine year-round. We handle everything from regular maintenance to chemical balancing, providing you with crystal-clear water that's always ready for a swim.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Weekly maintenance</li>
+              <li><i class="fas fa-check"></i> Chemical balancing</li>
+              <li><i class="fas fa-check"></i> Filter cleaning</li>
+              <li><i class="fas fa-check"></i> Surface skimming</li>
+            </ul>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h2>Equipment Installation & Repairs</h2>
+            <p>From pump replacements to filter installations, our expert technicians handle all your pool equipment needs. We work with top brands and provide reliable repairs to keep your pool systems running efficiently.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Pump installation</li>
+              <li><i class="fas fa-check"></i> Filter repairs</li>
+              <li><i class="fas fa-check"></i> Heater service</li>
+              <li><i class="fas fa-check"></i> Equipment upgrades</li>
+            </ul>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h2>System Upgrades</h2>
+            <p>Modernize your pool with our system upgrade services. We offer the latest in pool automation, energy-efficient equipment, and smart technology solutions to enhance your pool experience while reducing operating costs.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Automation systems</li>
+              <li><i class="fas fa-check"></i> LED lighting</li>
+              <li><i class="fas fa-check"></i> Salt systems</li>
+              <li><i class="fas fa-check"></i> Energy efficiency</li>
+            </ul>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="service-request" class="service-request-section">
+        <div class="service-request-container">
+          <h2>Request A Service</h2>
+          <form id="serviceRequestForm" class="service-request-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group full-width">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+              </div>
+              <div class="form-group">
+                <label for="serviceDate">Preferred Service Date</label>
+                <input type="date" id="serviceDate" name="serviceDate" required>
+              </div>
+              <div class="form-group">
+                <label for="serviceType">Service Type</label>
+                <select id="serviceType" name="serviceType" required>
+                  <option value="">Select a service</option>
+                  <option value="pool-care">Pool Care & Cleaning</option>
+                  <option value="equipment">Equipment Installs & Repairs</option>
+                  <option value="upgrades">System Upgrades</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="poolType">Type of Pool</label>
+                <select id="poolType" name="poolType" required>
+                  <option value="">Select pool type</option>
+                  <option value="above-ground">Above Ground</option>
+                  <option value="in-ground">In-Ground</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please provide any additional details about your service request"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="submit-button">
+              Submit Request <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Phone: (954) 323-2323</p>
+          <p>Email: info@blue-pools.com</p>
+          <p>Address: 1041 NW 31st Ave.<br>Pompano Beach, FL. 33069</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <div class="quick-links">
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/promotion.html">Promotion</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Blue Pool. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

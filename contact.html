@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us - Blue Pool Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Get in touch with Blue Pool Services for professional pool maintenance and repairs">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Blue Pool</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/promotion.html">Promotion</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="contact-hero">
+        <div class="contact-hero-content">
+          <h1>Contact Us</h1>
+          <div class="contact-info-grid">
+            <div class="contact-info-card">
+              <h2>Address</h2>
+              <p>1041 NW 31st Ave.</p>
+              <p>Pompano Beach, FL. 33069</p>
+            </div>
+            <div class="contact-info-card">
+              <h2>Contact</h2>
+              <p>+1 (954) 323-2323</p>
+              <p>info@blue-pools.com</p>
+              <a href="#" class="emergency-link">Emergency contact</a>
+            </div>
+            <div class="contact-info-card">
+              <h2>Opening Hours</h2>
+              <p>Mon - Fri</p>
+              <p>7:00 am – 6:00 pm</p>
+            </div>
+          </div>
+          <div class="social-links-contact">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="submit-button">Send</button>
+            </form>
+          </div>
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.8089547920967!2d-80.1551187!3d26.2121753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d90c2c4ecd76a7%3A0x9a1f71517e17d4c!2s1041%20NW%2031st%20Ave%2C%20Pompano%20Beach%2C%20FL%2033069!5e0!3m2!1sen!2sus!4v1708451234567!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Phone: (954) 323-2323</p>
+          <p>Email: info@blue-pools.com</p>
+          <p>Address: 1041 NW 31st Ave.<br>Pompano Beach, FL. 33069</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <div class="quick-links">
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/promotion.html">Promotion</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Blue Pool. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
