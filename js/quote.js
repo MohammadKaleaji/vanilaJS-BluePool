@@ -1,33 +1,53 @@
 // Quote popup functionality
 export function initializeQuoteSystem() {
+  console.log('Initializing quote system...');
+  
   const quoteButtons = document.querySelectorAll('.cta-button');
+  console.log('Found quote buttons:', quoteButtons.length);
+  
+  if (quoteButtons.length === 0) {
+    console.error('No CTA buttons found!');
+    return;
+  }
+  
   const quotePopup = createQuotePopup();
+  console.log('Quote popup created:', quotePopup);
   
   document.body.appendChild(quotePopup);
+  console.log('Quote popup added to body');
 
   // Open popup when clicking CTA buttons
-  quoteButtons.forEach(button => {
+  quoteButtons.forEach((button, index) => {
+    console.log(`Adding click listener to button ${index + 1}`);
     button.addEventListener('click', function(e) {
+      console.log('CTA button clicked!');
       e.preventDefault();
       quotePopup.classList.add('active');
+      console.log('Popup should now be visible');
     });
   });
 
   // Close popup
   const closeButton = quotePopup.querySelector('.close-popup');
-  closeButton.addEventListener('click', () => {
-    quotePopup.classList.remove('active');
-  });
+  if (closeButton) {
+    closeButton.addEventListener('click', () => {
+      console.log('Close button clicked');
+      quotePopup.classList.remove('active');
+    });
+  }
 
   // Close popup when clicking outside
   quotePopup.addEventListener('click', function(e) {
     if (e.target === quotePopup) {
+      console.log('Clicked outside popup, closing');
       quotePopup.classList.remove('active');
     }
   });
 
   // Initialize form functionality
   initializeQuoteForm(quotePopup);
+  
+  console.log('Quote system initialization complete');
 }
 
 function createQuotePopup() {
