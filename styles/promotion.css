@@ -59,12 +59,12 @@
 }
 
 .comparison-table i.fa-check {
-  color: #22c55e;
+  color: #63B1D3;  /* Client's light blue instead of green */
   font-size: 1.2rem;
 }
 
 .comparison-table i.fa-times {
-  color: #ef4444;
+  color: #325C6C;  /* Client's dark blue instead of red */
   font-size: 1.2rem;
 }
 

@@ -1,7 +1,7 @@
 /* Contact Page Styles */
 .contact-hero {
   padding: 120px 7% 80px;
-  background: linear-gradient(rgba(43, 77, 92, 0.8), rgba(43, 77, 92, 0.8)),
+  background: linear-gradient(rgba(50, 92, 108, 0.8), rgba(50, 92, 108, 0.8)),
     url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   min-height: 50vh;
   display: flex;
@@ -148,7 +148,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 4px rgba(75, 163, 195, 0.1);
+  box-shadow: 0 0 0 4px rgba(99, 177, 211, 0.1);
 }
 
 .form-group textarea {
@@ -177,7 +177,7 @@
 
 .submit-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(43, 77, 92, 0.2);
+  box-shadow: 0 10px 20px rgba(50, 92, 108, 0.2);
 }
 
 .contact-map {

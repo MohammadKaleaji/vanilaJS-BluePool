@@ -1,14 +1,14 @@
 /* Base styles */
 :root {
-  --primary-color: #2B4D5C;    /* Darker blue from logo */
-  --secondary-color: #1B3540;  /* Even darker blue for contrast */
-  --accent-color: #4BA3C3;     /* Lighter blue from logo */
+  --primary-color: #325C6C;    /* Client's dark blue */
+  --secondary-color: #325C6C;  /* Use client's dark blue instead of old color */
+  --accent-color: #63B1D3;     /* Client's light blue */
   --text-color: #333333;
-  --light-bg: #F5F9FB;         /* Very light blue-tinted background */
+  --light-bg: #F6F0EA;         /* Client's grey */
   --white: #ffffff;
   --glass-bg: rgba(255, 255, 255, 0.95);
-  --glass-border: rgba(75, 163, 195, 0.25); /* Using accent color */
-  --shadow-color: rgba(43, 77, 92, 0.15);   /* Using primary color */
+  --glass-border: rgba(99, 177, 211, 0.25);
+  --shadow-color: rgba(50, 92, 108, 0.15);
   --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
 }
 
@@ -34,25 +34,27 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--glass-border);
+  background: var(--secondary-color);  /* Same as footer - dark blue */
+  border-bottom: 2px solid var(--accent-color);  /* Nice border with light blue */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(50, 92, 108, 0.2);  /* Subtle shadow */
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  height: 70px;  /* Increased from 50px to 70px */
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  max-width: 300px;  /* Increased from 200px to 300px */
 }
 
 .nav-links {
@@ -60,9 +62,10 @@ nav {
   gap: 1.5rem;
 }
 
+/* Update navigation links for better contrast on dark background */
 nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--white);  /* White text on dark background */
   font-weight: 500;
   transition: all 0.3s ease;
   padding: 0.5rem 0.75rem;
@@ -71,12 +74,12 @@ nav a {
 }
 
 nav a:hover {
-  background: var(--gradient);
+  background: var(--accent-color);  /* Light blue on hover */
   color: var(--white);
 }
 
 nav a[aria-current='page'] {
-  background: var(--gradient);
+  background: var(--accent-color);  /* Light blue for active page */
   color: var(--white);
 }
 
@@ -85,7 +88,7 @@ nav a[aria-current='page'] {
   display: none;
   background: none;
   border: none;
-  color: var(--primary-color);
+  color: var(--white);  /* White on dark background */
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -219,12 +222,12 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(43, 77, 92, 0.2);
+  box-shadow: 0 10px 20px rgba(50, 92, 108, 0.2);
 }
 
 .cta-button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(43, 77, 92, 0.3);
+  box-shadow: 0 15px 30px rgba(50, 92, 108, 0.3);
 }
 
 /* Animations */
@@ -267,24 +270,18 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: block;
-  }
-
   .nav-links {
     display: none;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
-    background: var(--glass-bg);
+    background: var(--secondary-color);  /* Same dark background */
     padding: 1rem;
     flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(50, 92, 108, 0.2);
   }
 
   .nav-links.active {
@@ -341,6 +338,14 @@ footer {
   .grid {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
+  }
+
+  .logo {
+    height: 50px;  /* Smaller on mobile to fit better */
+  }
+  
+  .logo img {
+    max-width: 200px;  /* Smaller max-width on mobile */
   }
 }
 
